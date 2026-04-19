@@ -1,0 +1,15 @@
+[Unit]
+Description=Baby white noise google cast Python Application
+After=network.target
+
+[Service]
+Type=simple
+User=ry0
+Group=ry0
+WorkingDirectory=/home/ry0/Workspace/Python/google_cast
+ExecStart=/usr/bin/python3 /home/ry0/Workspace/Python/google_cast/main.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
